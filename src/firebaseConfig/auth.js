@@ -43,7 +43,7 @@ export const ChangePassword = (password) => {
   return updatePassword(auth.currentUser, password);
 };
 
-//email verification
+//email verification.
 export const EmailVerification = () => {
   return sendEmailVerification(auth.currentUser, {
     url: `${window.location.origin}/home`,
