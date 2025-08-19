@@ -28,12 +28,12 @@ export const signInWithGoogle = async () => {
   return result;
 };
 
-//signOut
+//signOut.
 export const SignOut = () => {
   return auth.signOut();
 };
 
-//passsword Reset
+//passsword Reset/
 export const ResetPassword = (email) => {
   return sendPasswordResetEmail(auth, email);
 };
