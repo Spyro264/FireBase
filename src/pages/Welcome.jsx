@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Welcome = () => {
   const navigate = useNavigate();
 
+  // lgout fun
   const handleLogout = () => {
     SignOut()
       .then(() => {
