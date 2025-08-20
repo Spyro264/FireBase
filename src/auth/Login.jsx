@@ -126,6 +126,13 @@ const Login = () => {
           >
             Login using Google
           </Button>
+          <Button
+            variant="contained"
+            sx={{ fontWeight: 900, fontSize: "12px", marginLeft: 2 }}
+            onClick={() => navigate("/loginwithnumber")}
+          >
+            Login with Phone number
+          </Button>
         </Box>
       </Box>
     </Box>

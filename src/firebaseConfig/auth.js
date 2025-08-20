@@ -4,12 +4,16 @@ import {
   sendEmailVerification,
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
+  signInWithPhoneNumber,
   signInWithPopup,
   updatePassword,
 } from "firebase/auth";
 import { auth } from "./firebase";
 
-console.log({ auth: auth.currentUser });
+// login with phoneNumber
+export const loginWithPhoneNumber = async (phoneNumber, appVerifier) => {
+  return signInWithPhoneNumber(auth, phoneNumber, appVerifier);
+};
 
 // create user with email pas pass
 export const createUserWithEmail = async (email, password) => {
