@@ -1,12 +1,16 @@
 import { Box, Button, TextField } from "@mui/material";
 import { getAuth, RecaptchaVerifier } from "firebase/auth";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { auth } from "../firebaseConfig/firebase";
 import { loginWithPhoneNumber } from "../firebaseConfig/auth";
 
 const LoginWithNumber = () => {
   const [number, setNumber] = useState("");
   const auth = getAuth();
+
+  useEffect(() => {
+    console.log({ auth });
+  }, []);
 
   const sendOtp = async () => {
     try {

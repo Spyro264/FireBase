@@ -10,7 +10,7 @@ const Welcome = () => {
   const handleLogout = () => {
     SignOut()
       .then(() => {
-        alert("logged poout successfully");
+        alert("logged out successfully");
         navigate("/login");
       })
       .catch((err) => {
@@ -19,8 +19,17 @@ const Welcome = () => {
   };
 
   return (
-    <div>
-      <h1>Hey there you are logged in thats y u wer able to seee this page</h1>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <h1 style={{ color: "green", textAlign: "center" }}>
+        Logged In Siccessfully
+      </h1>
       <Button onClick={handleLogout}>Logout</Button>
     </div>
   );
